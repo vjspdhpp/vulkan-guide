@@ -8,6 +8,8 @@
 struct FrameData {
 	VkCommandPool _commandPool;
 	VkCommandBuffer _mainCommandBuffer;
+	VkSemaphore _swapchainSemaphore, _renderSemaphore;
+	VkFence _renderFence;//Fence(栅栏) 用于CPU和GPU之间的同步
 };
 
 constexpr unsigned int FRAME_OVERLAP = 2;
